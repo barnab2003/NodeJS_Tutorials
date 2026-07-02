@@ -1,27 +1,22 @@
+const form = document.querySelector('form');
+const tasklist = document.getElementById("task-list");
 
+form.addEventListener("submit", function (event){
+    event.preventDefault();
+    const taskInput = document.getElementById("task-name").value.trim();
+    const taskdescription = document.getElementById("new-task").value.trim();
 
-const products = [
-    {
-        id: 1,
-        name: "Laptop",
-        price: 60000,
-        stock: 10
-    },
-    {
-        id: 2,
-        name: "Mouse",
-        price: 1000,
-        stock: 50
-    },
-    {
-        id: 3,
-        name: "Keyboard",
-        price: 2500,
-        stock: 20
+    if(taskInput === "" || taskdescription === ""){
+        alert("Please fill in both fields.");
+        return;
     }
-];
-localStorage.setItem("products", JSON.stringify(products));
 
-const itermarray = JSON.parse(localStorage.getItem("products"));
+    const li = document.createElement("li");
+    const span = document.createElement("span");
+    span.innerHTML = `<strong>${taskInput}</strong>: ${taskdescription}`;
+    li.appendChild(span);
 
-console.log(itermarray);
+    tasklist.appendChild(li);
+
+    form.reset();
+});

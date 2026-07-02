@@ -3,56 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Document</title>
 </head>
 <body>
-
-<header>
-    <h1>BARNAB BARMAN</h1>
-
-    <nav>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </nav>
-</header>
-
-<main>
-
-<div id="about">
-    <h2>About Me</h2>
-    <p>I am learning MERN Stack Development.</p>
-</div>
-
-<div id="projects">
-    <h2>Projects</h2>
-
-    <ul>
-        <li>Online Pharmacy Website</li>
-        <li>MERN E-commerce Website</li>
-        <li>GitHub Profile Finder</li>
-    </ul>
-</div>
-
-<div id="contact">
-    <h2>Contact</h2>
-
     <form>
-        <label for="name">Name:</label><br>
-        <input id="name" type="text"><br><br>
-
-        <label for="email">Email:</label><br>
-        <input id="email" type="email"><br><br>
-
-        <button type="submit">Send</button>
+        <input type="text" id="task-name" placeholder="Task name">
+        <input type="text" id="new-task" placeholder="What needs to be done?">
+        <button id="add-btn" type="submit">Add Task</button>
     </form>
-</div>
-
-</main>
-
-<footer>
-    <p>&copy; 2026 Your Name</p>
-</footer>
-
+    <ul id="task-list"></ul>
+    <script src="index.js"></script>
 </body>
 </html>
